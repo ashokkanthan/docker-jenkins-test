@@ -3,8 +3,8 @@
     hosts: all
     tasks:
         -
-            name: 'Check yum check update command'
-            command: yum check-update
+            name: 'Check ip addr'
+            command: ip addr
             register: out
 
         - debug: var=out.stdout_lines
