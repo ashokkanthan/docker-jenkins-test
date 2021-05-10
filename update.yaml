@@ -1,6 +1,10 @@
-- name: Upgrade all packages
-  yum:
-    name: '*'
-    state: latest
-    update_only: true
-    skip_broken: true
+-
+    name: 'Run install'
+    hosts: all
+    tasks:
+        -
+            name: 'Install packages'
+            yum:
+              name: httpd
+              state: present
+              update_cache: true
