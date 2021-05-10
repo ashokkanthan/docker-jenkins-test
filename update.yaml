@@ -1,0 +1,11 @@
+- name: Install the latest version of Apache
+  yum:
+    name: httpd
+    state: latest
+    
+- name: Upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+    update_only: true
+    skip_broken: true
