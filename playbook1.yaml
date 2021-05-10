@@ -1,0 +1,10 @@
+-
+    name: 'Execute command'
+    hosts: all
+    tasks:
+        -
+            name: 'Check yum check update command'
+            command: yum check-update
+            register: out
+
+        - debug: var=out.stdout_lines
